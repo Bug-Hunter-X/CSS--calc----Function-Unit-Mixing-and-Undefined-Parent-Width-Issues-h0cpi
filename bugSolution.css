@@ -1,0 +1,32 @@
+Several approaches can mitigate the issues with the `calc()` function:
+
+1. **Explicit Parent Width:** Ensure the parent element has its width explicitly defined. This provides a stable base for the `calc()` function to work from.
+
+2. **Consistent Units:**  While generally flexible, maintaining consistent units (e.g., only pixels or only percentages) within the `calc()` function can enhance browser compatibility and avoid unexpected behavior.
+
+3. **Alternative Layout Techniques:** For complex layouts, consider using Flexbox or Grid to manage element sizes, often providing more predictable and robust results than relying solely on `calc()` for width calculation.
+
+Example using explicit parent width and consistent units:
+
+```css
+.parent {
+  width: 500px; /* Explicit width */
+}
+
+.element {
+  width: calc(50% - 10px);
+}
+```
+
+Example using Flexbox:
+
+```css
+.parent {
+  display: flex;
+}
+
+.element {
+  flex: 1; /* Takes available space */
+  margin-right: 10px; /* Equivalent to the 10px subtraction from calc() */
+}
+```
