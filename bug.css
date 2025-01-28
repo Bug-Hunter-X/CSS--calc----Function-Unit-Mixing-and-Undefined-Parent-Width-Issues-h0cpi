@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon error related to the `calc()` function and unit mixing:
+
+```css
+.element {
+  width: calc(50% - 10px);
+}
+```
+
+This code intends to make an element's width 50% of its parent's width, minus 10 pixels.  However, it can lead to unexpected behavior or errors in certain browsers if the parent element's width is not explicitly set, or if the unit mix is problematic in certain contexts.
